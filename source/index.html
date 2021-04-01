@@ -9,7 +9,7 @@
       <a class="page-header__logo">
         <img src="img/logo_sedona.svg" width="102" height="84" alt="Седона">
       </a>
-      <nav class="main-nav">
+      <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">
             Открыть меню
@@ -18,22 +18,22 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
-              <a>
+              <a class="main-nav__link">
                 Главная
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="photo.html">
+              <a class="main-nav__link" href="photo.html">
                 Фото и видео
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">
+              <a class="main-nav__link" href="form.html">
                 Форма отзыва
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
                 HTML Academy
               </a>
             </li>
@@ -49,11 +49,11 @@
       </section>
       <section class="features">
         <div class="features__wrapper">
-          <header class="features__header">
-            <h1 class="header__title">
+          <header class="features__header content-header">
+            <h1 class="content-header__title">
               Седона — небольшой городок в Аризоне, заслуживающий большего!
             </h1>
-            <p class="header__text">
+            <p class="content-header__text">
               Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
             </p>
           </header>
@@ -73,7 +73,7 @@
               <div class="features__image">
                 <img src="https://via.placeholder.com/320x260.png" alt="Настоящий городок">
               </div>
-              <ul class="tips-list">
+              <ul class="features__tips tips-list">
                 <li class="tips-list__item">
                   <h2 class="tips-list__title">
                     Жилье
@@ -182,32 +182,30 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <h2 class="page-footer__title">
+        <p class="page-footer__hashtag">
           #visitsedona
-        </h2>
-        <div class="page-footer__social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">
-                Twitter
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
-                Facebook
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="#">
-                Youtube
-              </a>
-            </li>
-          </ul>
-        </div>
+        </p>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--twitter" href="#">
+              Twitter
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--facebook" href="#">
+              Facebook
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--youtube" href="#">
+              Youtube
+            </a>
+          </li>
+        </ul>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">
+          <p class="copyright__text">
             Разработано
-          </b>
+          </p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
