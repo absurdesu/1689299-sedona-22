@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img src="img/logo_sedona.svg" width="102" height="84" alt="Седона">
+        <img src="img/logo-sedona.svg" width="102" height="84" alt="Седона">
       </a>
       <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle" type="button">
@@ -44,7 +45,7 @@
     <main class="page-main">
       <section class="welcome">
         <div class="welcome__wrapper">
-          <img src="img/logo_welcome.svg" width="229" height="39" alt="Добро пожаловать в прекрасную Седону">
+          <img src="img/logo-welcome.svg" width="229" height="39" alt="Добро пожаловать в прекрасную Седону">
         </div>
       </section>
       <section class="photos">
@@ -53,7 +54,7 @@
             <h1 class="content-header__title">
               Фото и видео
             </h1>
-            <p class="content-header__text">
+            <p class="content-header__text content-header__text--inner-page">
               Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о политике и экономике.
             </p>
           </header>
@@ -62,16 +63,16 @@
               <div class="photos__image">
                 <img src="https://via.placeholder.com/280x280.png" alt="Неродные просторы">
               </div>
-              <div class="photos__description description">
-                <div class="description__text">
-                  <h2 class="description__title">
+              <div class="photos__description photos-description">
+                <div class="photos-description__wrapper">
+                  <h2 class="photos-description__title">
                     Неродные просторы
                   </h2>
-                  <p class="description__author">
+                  <p class="photos-description__author">
                     Автор фото: Борис
                   </p>
                 </div>
-                <div class="photos__likes likes">
+                <div class="photos-description__likes likes">
                   <span class="likes__count">
                     1350
                   </span>
@@ -82,16 +83,16 @@
               <div class="photos__image">
                 <img src="https://via.placeholder.com/280x280.png" alt="Местная растительность">
               </div>
-              <div class="photos__description description">
-                <div class="description__text">
-                  <h2 class="description__title">
+              <div class="photos__description photos-description">
+                <div class="photos-description__wrapper">
+                  <h2 class="photos-description__title">
                     Местная растительность
                   </h2>
-                  <p class="description__author">
+                  <p class="photos-description__author">
                     Автор фото: Сергей
                   </p>
                 </div>
-                <div class="photos__likes likes">
+                <div class="photos-description__likes likes">
                   <span class="likes__count">
                     143
                   </span>
@@ -102,16 +103,16 @@
               <div class="photos__image">
                 <img src="https://via.placeholder.com/280x280.png" alt="Дорога на север">
               </div>
-              <div class="photos__description description">
-                <div class="description__text">
-                  <h2 class="description__title">
+              <div class="photos__description photos-description">
+                <div class="photos-description__wrapper">
+                  <h2 class="photos-description__title">
                     Дорога на север
                   </h2>
-                  <p class="description__author">
+                  <p class="photos-description__author">
                     Автор фото: Петр
                   </p>
                 </div>
-                <div class="photos__likes likes">
+                <div class="photos-description__likes likes">
                   <span class="likes__count">
                     96
                   </span>
@@ -122,16 +123,16 @@
               <div class="photos__image">
                 <img src="https://via.placeholder.com/280x280.png" alt="Мост дьявола">
               </div>
-              <div class="photos__description description">
-                <div class="description__text">
-                  <h2 class="description__title">
+              <div class="photos__description photos-description">
+                <div class="photos-description__wrapper">
+                  <h2 class="photos-description__title">
                     Мост дьявола
                   </h2>
-                  <p class="description__author">
+                  <p class="photos-description__author">
                     Автор фото: Антон
                   </p>
                 </div>
-                <div class="photos__likes likes">
+                <div class="photos-description__likes likes">
                   <span class="likes__count">
                     254
                   </span>
@@ -153,6 +154,30 @@
           </header>
           <div class="video__content">
             <!--Video placeholder-->
+            <div class="video__controls video-controls">
+              <div class="video-controls__progress video-progress">
+                <progress class="video-progress__bar">
+                   <span class="video-progress__time"></span>
+                </progress>
+              </div>
+              <div class="video-controls__wrapper">
+                <button class="video-controls__button rewind" type="button">
+                  <span class="visually-hidden">
+                    Возврат в начало
+                  </span>
+                </button>
+                <button class="video-controls__button closed-captions" type="button">
+                  <span class="visually-hidden">
+                    Субтитры
+                  </span>
+                </button>
+                <button class="video-controls__button fullscreen" type="button">
+                  <span class="visually-hidden">
+                    Полноэкранный режим
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
