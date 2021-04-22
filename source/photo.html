@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -155,7 +156,7 @@
           <div class="video__content">
             <!--Video placeholder-->
             <div class="video__controls video-controls">
-              <div class="video-controls__progress video-progress">
+              <div class="video-controls__progress video-controls__progress--outside video-progress">
                 <progress class="video-progress__bar">
                    <span class="video-progress__time"></span>
                 </progress>
@@ -166,6 +167,11 @@
                     Возврат в начало
                   </span>
                 </button>
+                <div class="video-controls__progress video-controls__progress--inside video-progress">
+                  <progress class="video-progress__bar">
+                     <span class="video-progress__time"></span>
+                  </progress>
+                </div>
                 <button class="video-controls__button closed-captions" type="button">
                   <span class="visually-hidden">
                     Субтитры
