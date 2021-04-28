@@ -19,7 +19,7 @@
   }
 }
 
-.photos__item:first-of-type {
+.photos__item--first {
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: -1;
@@ -41,7 +41,7 @@
   }
 }
 
-.photos__item:nth-of-type(2n+3) > .photos__description {
+.photos__description--alt {
   @media (min-width: @tablet-width) {
     background-color: @gray;
   }
