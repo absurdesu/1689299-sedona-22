@@ -1,7 +1,26 @@
 .feedback-form {
+  padding-bottom: 25px;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 768px;
+    padding: 10px 0 25px;
+  }
+}
+
+.feedback-form__fieldset {
+  border: none;
+  margin-top: 20px;
+  padding-bottom: 25px;
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @bordermobile;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -10,11 +29,30 @@
   font-size: 18px;
   line-height: 26px;
   color: @black;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.feedback-form__fieldset .feedback-form__legend {
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.feedback-form__fieldset--full-name .feedback-form__legend,
+.feedback-form__fieldset--contact .feedback-form__legend {
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
 
 .feedback-form__fieldset--impression {
   @media (min-width: @tablet-width) {
     order: -1;
+    border-right: 1px solid @bordertablet;
   }
 }
 
@@ -52,6 +90,8 @@
 }
 
 .feedback-form__fieldset--emotions {
+  border: none;
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -66,4 +106,12 @@
     line-height: 26px;
     order: 1;
   }
+}
+
+.feedback-form__button {
+  width: 280px;
+  height: 58px;
+  border: none;
+  display: block;
+  margin: 20px auto;
 }

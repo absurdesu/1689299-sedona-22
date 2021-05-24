@@ -8,23 +8,15 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo-sedona.svg" width="102" height="84" alt="Седона">
-      </a>
-      <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">
-            Открыть меню
-          </span>
-        </button>
+      <nav class="page-header__nav main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--first">
               <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--second">
               <a class="main-nav__link" href="photo.html">
                 Фото и видео
               </a>
@@ -34,17 +26,30 @@
                 Форма отзыва
               </a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item  main-nav__item--last">
               <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
                 HTML Academy
               </a>
             </li>
           </ul>
+          <button class="main-nav__close" type="button">
+            <span class="visually-hidden">
+              Закрыть меню
+            </span>
+          </button>
         </div>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
       </nav>
+      <a class="page-header__logo">
+        <img src="img/logo-sedona.svg" width="102" height="84" alt="Седона">
+      </a>
     </header>
     <main class="page-main">
-      <section class="welcome">
+      <section class="welcome welcome--inner">
         <div class="welcome__wrapper">
           <img src="img/logo-welcome.svg" width="229" height="39" alt="Добро пожаловать в прекрасную Седону">
         </div>
@@ -55,29 +60,29 @@
             <h1 class="content-header__title">
               Оставьте свой отзыв
             </h1>
-            <p class="content-header__text content-header__text--inner-page">
+            <p class="content-header__text">
               Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных Вами достопримечательностях
             </p>
           </header>
           <form class="feedback__form feedback-form" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset class="feedback-form__fieldset feedback-form__fieldset--name">
+            <fieldset class="feedback-form__fieldset feedback-form__fieldset--full-name">
               <legend class="feedback-form__legend">
                 Представьтесь:
               </legend>
-              <ul class="feedback-form__inputs inputs-list">
-                <li class="inputs-list__item">
-                  <label class="inputs-list__label" for="name">
+              <ul class="feedback-form__inputs inputs-list inputs-list--full-name">
+                <li class="inputs-list__item inputs-list__item--name">
+                  <label class="inputs-list__label inputs-list__label--name" for="name">
                     Имя*:
                   </label>
                   <input class="inputs-list__input inputs-list__input--name" type="text" name="name" id="name" placeholder="Петр">
                 </li>
-                <li class="inputs-list__item">
+                <li class="inputs-list__item inputs-list__item--surname">
                   <label class="inputs-list__label" for="surname">
                     Фамилия*:
                   </label>
                   <input class="inputs-list__input inputs-list__input--surname" type="text" name="surname" id="surname" placeholder="Иванов">
                 </li>
-                <li class="inputs-list__item">
+                <li class="inputs-list__item inputs-list__item--patronym">
                   <label class="inputs-list__label" for="patronym">
                     Отчество:
                   </label>
@@ -89,7 +94,7 @@
               <legend class="feedback-form__legend">
                 Контактная информация:
               </legend>
-              <ul class="feedback-form__inputs inputs-list">
+              <ul class="feedback-form__inputs inputs-list inputs-list--contact">
                 <li class="inputs-list__item">
                   <label class="inputs-list__label" for="phone">
                     Контактный телефон*:
@@ -108,24 +113,24 @@
               <legend class="feedback-form__legend">
                 Ваше общее впечатление:
               </legend>
-              <ul class="feedback-form__inputs inputs-list">
+              <ul class="feedback-form__inputs inputs-list inputs-list--impression">
                 <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="positive">
+                  <input class="inputs-list__input inputs-list__input--radio visually-hidden" type="radio" name="impression" id="positive" value="positive" checked>
+                  <label class="inputs-list__label inputs-list__label--radio inputs-list__label--alt" for="positive">
                     Скорее положительное
                   </label>
-                  <input class="inputs-list__input inputs-list__input--radio" type="radio" name="impression" id="positive" value="positive" checked>
                 </li>
-                <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="negative">
+                <li class="inputs-list__item inputs-list__item--negative">
+                  <input class="inputs-list__input inputs-list__input--radio visually-hidden" type="radio" name="impression" id="negative" value="negative">
+                  <label class="inputs-list__label inputs-list__label inputs-list__label--radio inputs-list__label--alt" for="negative">
                     Скорее отрицательное
                   </label>
-                  <input class="inputs-list__input inputs-list__input--radio" type="radio" name="impression" id="negative" value="negative">
                 </li>
-                <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="neutral">
+                <li class="inputs-list__item inputs-list__item--neutral">
+                  <input class="inputs-list__input inputs-list__input--radio visually-hidden" type="radio" name="impression" id="neutral" value="neutral">
+                  <label class="inputs-list__label inputs-list__label--radio inputs-list__label--alt" for="neutral">
                     Затрудняюсь ответить
                   </label>
-                  <input class="inputs-list__input inputs-list__input--radio" type="radio" name="impression" id="neutral" value="neutral">
                 </li>
               </ul>
             </fieldset>
@@ -133,30 +138,30 @@
               <legend class="feedback-form__legend">
                 Посещенные достопримечательности:
               </legend>
-              <ul class="feedback-form__inputs inputs-list">
+              <ul class="feedback-form__inputs inputs-list inputs-list--attraction">
                 <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="bridge">
+                  <input class="inputs-list__input inputs-list__input--checkbox visually-hidden" type="checkbox" name="attraction" id="bridge" value="bridge" checked>
+                  <label class="inputs-list__label inputs-list__label--checkbox inputs-list__label--alt" for="bridge">
                     Мост Дьявола
                   </label>
-                  <input class="inputs-list__input inputs-list__input--checkbox" type="checkbox" name="attraction" id="bridge" value="bridge" checked>
                 </li>
-                <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="mount">
+                <li class="inputs-list__item inputs-list__item--mount">
+                  <input class="inputs-list__input inputs-list__input--checkbox visually-hidden" type="checkbox" name="attraction" id="mount" value="mount" checked>
+                  <label class="inputs-list__label inputs-list__label--checkbox inputs-list__label--alt" for="mount">
                     Гора-Колокол
                   </label>
-                  <input class="inputs-list__input inputs-list__input--checkbox" type="checkbox" name="attraction" id="mount" value="mount" checked>
                 </li>
-                <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="park">
+                <li class="inputs-list__item inputs-list__item--park">
+                  <input class="inputs-list__input inputs-list__input--checkbox visually-hidden" type="checkbox" name="attraction" id="park" value="park" checked>
+                  <label class="inputs-list__label inputs-list__label--checkbox inputs-list__label--alt" for="park">
                     Слайд-парк
                   </label>
-                  <input class="inputs-list__input inputs-list__input--checkbox" type="checkbox" name="attraction" id="park" value="park" checked>
                 </li>
-                <li class="inputs-list__item">
-                  <label class="inputs-list__label inputs-list__label--alt" for="cliffs">
+                <li class="inputs-list__item inputs-list__item--cliffs">
+                  <input class="inputs-list__input inputs-list__input--checkbox visually-hidden" type="checkbox" name="attraction" id="cliffs" value="cliffs">
+                  <label class="inputs-list__label inputs-list__label--checkbox inputs-list__label--alt" for="cliffs">
                     Красные скалы
                   </label>
-                  <input class="inputs-list__input inputs-list__input--checkbox" type="checkbox" name="attraction" id="cliffs" value="cliffs">
                 </li>
               </ul>
             </fieldset>
@@ -191,17 +196,23 @@
         <ul class="page-footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--twitter" href="#">
-              Twitter
+              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
+              </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--facebook" href="#">
-              Facebook
+              <svg width="9" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.3 3.4h2.4V0H5.8C2.7.2 1.5 2.4 1.9 6.1H0v3.5h2v9.3h3.8V9.6h2.9V6.1H5.8c0-1 0-2.4.5-2.7z" fill="#fff"/>
+              </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--youtube" href="#">
-              Youtube
+              <svg width="20" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8v8.3C0 12.7 1.3 14 2.8 14h14.3c1.6 0 2.8-1.3 2.8-2.8V2.8C20 1.3 18.7 0 17.1 0zM7 10.4V3.6L13.8 7 7 10.4z" fill="#fff"/>
+              </svg>
             </a>
           </li>
         </ul>
@@ -210,7 +221,7 @@
             Разработано
           </p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__image" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+            <svg width="27" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8zM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9z" fill="#000"/></svg>
           </a>
         </div>
       </div>
@@ -221,11 +232,13 @@
           Ваш отзыв отправлен!
         </h2>
         <p class="modal__text">
-          Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+          Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. <br class="linebreak linebreak--mobile"> В ближайшее время мы опубликуем его на сайте.
         </p>
-        <button class="modal__close modal__close--success button" type="button">
-          Закрыть окно
-        </button>
+        <div class="modal__container">
+          <button class="modal__button modal__button--success button" type="button">
+            Закрыть окно
+          </button>
+        </div>
       </div>
     </section>
     <section class="modal modal--failure">
@@ -236,7 +249,7 @@
         <p class="modal__text">
           Проверьте поля, выделенные красным, скорее всего Вы забыли их заполнить
         </p>
-        <button class="modal__close modal__close--failure button" type="button">
+        <button class="modal__button modal__button--failure button" type="button">
           OK
         </button>
       </div>

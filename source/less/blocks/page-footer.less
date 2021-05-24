@@ -1,17 +1,22 @@
 .page-footer__wrapper {
-  width: 150px;
+  width: 320px;
   margin: 0 auto;
+  padding-top: 11px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    width: 650px;
+    width: 648px;
     flex-direction: row;
+    padding: 25px 60px 16px;
   }
 
   @media (min-width: @desktop-width) {
     width: 960px;
+    padding: 36px 120px 16px;
   }
 }
 
@@ -19,4 +24,9 @@
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 17px;
+  }
 }
